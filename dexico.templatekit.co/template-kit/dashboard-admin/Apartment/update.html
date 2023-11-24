@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/form.css">
+    <script src="js/form.js"></script>
+</head>
+<body>
+<form class="whatsapp-form">
+    <h1>Update Apartment</h1>
+    <div class="datainput">
+        <input class="validate" id="name" name="name" required="" type="text" value=''/>
+        <span class="highlight"></span><span class="bar"></span>
+        <label>Apartment name</label>
+    </div>
+    <div class="datainput">
+        <input class="validate" id="room_number" name="room_number" required="" type="number" value=''/>
+        <span class="highlight"></span><span class="bar"></span>
+        <label>Room Number</label>
+    </div>
+    <div class="datainput">
+        <input class="validate" id="area" name="area" required="" type="number" value=''/>
+        <span class="highlight"></span><span class="bar"></span>
+        <label>Area</label>
+    </div>
+    <div class="datainput">
+        <input class="validate" id="number_of_bedroom" name="number_of_bedroom" required="" type="number" value=''/>
+        <span class="highlight"></span><span class="bar"></span>
+        <label>Number Of Bedroom</label>
+    </div>
+    <div class="datainput">
+        <input class="validate" id="monthly_rent" name="monthly_rent" required="" type="number" value=''/>
+        <span class="highlight"></span><span class="bar"></span>
+        <label>Monthly Rent</label>
+    </div>
+    <div class="datainput">
+        <input class="validate" id="max_tenant" name="max_tenant" required="" type="number" value=''/>
+        <span class="highlight"></span><span class="bar"></span>
+        <label>Max Tenant</label>
+    </div>
+    <div class="datainput">
+        <select id="building">
+            <option hidden='hidden' selected='selected' value='default'>Choose Building</option>
+            <option value="1">List Option 1</option>
+            <option value="2">List Option 2</option>
+            <option value="3">List Option 3</option>
+        </select>
+    </div>
+
+    <button class="send_form" type="submit" title="Send to Whatsapp">Submit</button>
+    <div id="text-info"></div>
+</form>
+
+</body>
+</html>

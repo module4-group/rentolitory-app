@@ -1,0 +1,124 @@
+HTTrack3.49-2+htsswf+htsjava launched on Mon, 20 Nov 2023 10:51:26 at https://dexico.templatekit.co/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://dexico.templatekit.co/ -O1 "D:\CodeGym\BC JAVA\module4\fe-md4" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+10:52:28	Warning: 	Retry after error -4 (No data (connection closed)) at link https://dexico.templatekit.co/xmlrpc.php?rsd (from https://dexico.templatekit.co/)
+10:53:36	Error: 	"Not Found" (404) at link https://dexico.templatekit.co/template-kit/oops (from https://dexico.templatekit.co/)
+10:53:49	Warning: 	Retry after error -4 (No data (connection closed)) at link https://dexico.templatekit.co/xmlrpc.php?rsd (from https://dexico.templatekit.co/)
+10:53:49	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=101
+10:53:49	Warning: 	File has moved from https://dexico.templatekit.co/?p=101 to https://dexico.templatekit.co/template-kit/home-company/
+10:53:49	Error: 	"Not Found" (404) at link https://dexico.templatekit.co/template-kit/home-company/https:/dexico.templatekit.co/wp-content/uploads/sites/26/2020/09/modern-house.jpg (from https://dexico.templatekit.co/template-kit/home-company/)
+10:53:49	Error: 	"Not Found" (404) at link https://dexico.templatekit.co/template-kit/home-company/https:/dexico.templatekit.co/wp-content/uploads/sites/26/2020/09/large-modern-lamp.jpg (from https://dexico.templatekit.co/template-kit/home-company/)
+10:53:49	Error: 	"Not Found" (404) at link https://dexico.templatekit.co/template-kit/home-company/https:/dexico.templatekit.co/wp-content/uploads/sites/26/2020/09/modern-bedroom-interior.jpg (from https://dexico.templatekit.co/template-kit/home-company/)
+10:53:49	Error: 	"Not Found" (404) at link https://dexico.templatekit.co/template-kit/home-company/https:/dexico.templatekit.co/wp-content/uploads/sites/26/2020/09/open-space-living-room-and-kitchen-in-glamour-family-house.jpg (from https://dexico.templatekit.co/template-kit/home-company/)
+10:53:49	Error: 	"Not Found" (404) at link https://dexico.templatekit.co/template-kit/home-company/https:/dexico.templatekit.co/wp-content/uploads/sites/26/2020/09/armchair-and-cabinet.jpg (from https://dexico.templatekit.co/template-kit/home-company/)
+10:53:49	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=230
+10:53:49	Warning: 	File has moved from https://dexico.templatekit.co/?p=230 to https://dexico.templatekit.co/template-kit/home-grid/
+10:53:49	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=416
+10:53:49	Warning: 	File has moved from https://dexico.templatekit.co/?p=416 to https://dexico.templatekit.co/template-kit/home-4/
+10:53:49	Error: 	"Not Found" (404) at link https://dexico.templatekit.co/wp-content/uploads/sites/26/2020/09/modern-house-with-garden-swimming-pool-and-wooden-deck.jpg (from https://dexico.templatekit.co/template-kit/home-4/)
+10:53:49	Error: 	"Not Found" (404) at link https://dexico.templatekit.co/wp-content/uploads/sites/26/2020/09/modern-house-with-garden-swimming-pool-and-wooden-deck-1.jpg (from https://dexico.templatekit.co/template-kit/home-4/)
+10:53:49	Error: 	"Not Found" (404) at link https://dexico.templatekit.co/wp-content/uploads/sites/26/2020/09/modern-house-with-garden-swimming-pool-and-wooden-deck-2.jpg (from https://dexico.templatekit.co/template-kit/home-4/)
+10:53:49	Error: 	"Not Found" (404) at link https://dexico.templatekit.co/wp-content/uploads/sites/26/2020/09/modern-house-with-garden-swimming-pool-and-wooden-deck-3.jpg (from https://dexico.templatekit.co/template-kit/home-4/)
+10:53:49	Error: 	"Not Found" (404) at link https://dexico.templatekit.co/wp-content/uploads/sites/26/2020/09/modern-house-with-garden-swimming-pool-and-wooden-deck-4.jpg (from https://dexico.templatekit.co/template-kit/home-4/)
+10:53:49	Error: 	"Not Found" (404) at link https://dexico.templatekit.co/wp-content/uploads/sites/26/2020/09/new-design-house-surrounded-by-green.jpg (from https://dexico.templatekit.co/template-kit/home-4/)
+10:53:49	Error: 	"Not Found" (404) at link https://dexico.templatekit.co/wp-content/uploads/sites/26/2020/09/modern-house-with-garden-swimming-pool-and-wooden-deck-5.jpg (from https://dexico.templatekit.co/template-kit/home-4/)
+10:53:50	Error: 	"Not Found" (404) at link https://dexico.templatekit.co/wp-content/uploads/sites/26/2020/09/modern-house-with-garden-swimming-pool-and-wooden-deck-6.jpg (from https://dexico.templatekit.co/template-kit/home-4/)
+10:53:50	Error: 	"Not Found" (404) at link https://dexico.templatekit.co/wp-content/uploads/sites/26/2020/09/modern-house-with-garden-swimming-pool-and-wooden-deck-7.jpg (from https://dexico.templatekit.co/template-kit/home-4/)
+10:53:50	Error: 	"Not Found" (404) at link https://dexico.templatekit.co/wp-content/uploads/sites/26/2020/09/modern-house-exterior-3.jpg (from https://dexico.templatekit.co/template-kit/home-4/)
+10:53:56	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=211
+10:53:56	Warning: 	File has moved from https://dexico.templatekit.co/?p=211 to https://dexico.templatekit.co/template-kit/propertys-style-1/
+10:54:05	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=237
+10:54:05	Warning: 	File has moved from https://dexico.templatekit.co/?p=237 to https://dexico.templatekit.co/template-kit/propertys-list/
+10:54:05	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=156
+10:54:05	Warning: 	File has moved from https://dexico.templatekit.co/?p=156 to https://dexico.templatekit.co/template-kit/property_details1/
+10:54:05	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=175
+10:54:05	Warning: 	File has moved from https://dexico.templatekit.co/?p=175 to https://dexico.templatekit.co/template-kit/property_details2/
+10:54:05	Error: 	"Not Found" (404) at link https://dexico.templatekit.co/wp-content/uploads/sites/26/2020/09/pastel-blue-bedclothes.jpg (from https://dexico.templatekit.co/template-kit/property_details2/)
+10:54:05	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=198
+10:54:05	Warning: 	File has moved from https://dexico.templatekit.co/?p=198 to https://dexico.templatekit.co/template-kit/agents/
+10:54:05	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=193
+10:54:05	Warning: 	File has moved from https://dexico.templatekit.co/?p=193 to https://dexico.templatekit.co/template-kit/agent-details/
+10:54:05	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=105
+10:54:05	Warning: 	File has moved from https://dexico.templatekit.co/?p=105 to https://dexico.templatekit.co/template-kit/about-us/
+10:54:29	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=286
+10:54:29	Warning: 	File has moved from https://dexico.templatekit.co/?p=286 to https://dexico.templatekit.co/2020/08/15/oh-mamma-im-in-love-with-gradient/
+10:54:30	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=208
+10:54:30	Warning: 	File has moved from https://dexico.templatekit.co/?p=208 to https://dexico.templatekit.co/template-kit/contacts/
+10:54:30	Error: 	"No data (connection closed)" (-4) after 2 retries at link https://dexico.templatekit.co/xmlrpc.php?rsd (from https://dexico.templatekit.co/)
+10:54:30	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=289
+10:54:30	Warning: 	File has moved from https://dexico.templatekit.co/?p=289 to https://dexico.templatekit.co/2020/08/15/five-chilling-instances-of-slips-in-time/
+10:54:30	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=18
+10:54:30	Warning: 	File has moved from https://dexico.templatekit.co/?p=18 to https://dexico.templatekit.co/2020/08/15/my-secret-weapon-for-design-inspiration/
+10:55:12	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=288
+10:55:12	Warning: 	File has moved from https://dexico.templatekit.co/?p=288 to https://dexico.templatekit.co/2020/08/15/98-of-you-dont-eat-enough-of-this-crucial-food/
+10:55:12	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=287
+10:55:12	Warning: 	File has moved from https://dexico.templatekit.co/?p=287 to https://dexico.templatekit.co/2020/08/15/how-to-identify-a-smart-person-in-3-minutes/
+10:55:12	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=285
+10:55:12	Warning: 	File has moved from https://dexico.templatekit.co/?p=285 to https://dexico.templatekit.co/2020/08/15/how-to-configure-application-color-schemes-with-custom-properties/
+10:55:12	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=59
+10:55:12	Warning: 	File has moved from https://dexico.templatekit.co/?p=59 to https://dexico.templatekit.co/2020/08/14/9-things-you-should-do-when-you-wake-up/
+10:55:12	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=292
+10:55:12	Warning: 	File has moved from https://dexico.templatekit.co/?p=292 to https://dexico.templatekit.co/2020/08/14/wordpress-without-shame/
+10:55:12	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=291
+10:55:12	Warning: 	File has moved from https://dexico.templatekit.co/?p=291 to https://dexico.templatekit.co/2020/08/14/how-technology-is-hijacking-your-mind-from-a-magician-and-google-design-ethicist/
+10:55:12	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=290
+10:55:12	Warning: 	File has moved from https://dexico.templatekit.co/?p=290 to https://dexico.templatekit.co/2020/08/14/apples-latest-power-move-steals-web-traffic-from-publishers/
+10:55:32	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=685
+10:55:32	Warning: 	File has moved from https://dexico.templatekit.co/?p=685 to https://dexico.templatekit.co/template-kit/news-section/
+10:55:32	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=682
+10:55:32	Warning: 	File has moved from https://dexico.templatekit.co/?p=682 to https://dexico.templatekit.co/template-kit/hero-section-variant-2/
+10:55:32	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=679
+10:55:32	Warning: 	File has moved from https://dexico.templatekit.co/?p=679 to https://dexico.templatekit.co/template-kit/our-contacts-section/
+10:55:32	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=676
+10:55:32	Warning: 	File has moved from https://dexico.templatekit.co/?p=676 to https://dexico.templatekit.co/template-kit/real-estate-agents-grid/
+10:55:32	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=673
+10:55:32	Warning: 	File has moved from https://dexico.templatekit.co/?p=673 to https://dexico.templatekit.co/template-kit/about-company-gallery-section/
+10:55:32	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=670
+10:55:32	Warning: 	File has moved from https://dexico.templatekit.co/?p=670 to https://dexico.templatekit.co/template-kit/grid-photo-gallery-section/
+10:55:32	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=667
+10:55:32	Warning: 	File has moved from https://dexico.templatekit.co/?p=667 to https://dexico.templatekit.co/template-kit/company-features-section/
+10:55:32	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=664
+10:55:32	Warning: 	File has moved from https://dexico.templatekit.co/?p=664 to https://dexico.templatekit.co/template-kit/minimalistic-footer-section/
+10:55:32	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=661
+10:55:32	Warning: 	File has moved from https://dexico.templatekit.co/?p=661 to https://dexico.templatekit.co/template-kit/photo-gallery-section/
+10:55:32	Error: 	"Not Found" (404) at link https://dexico.templatekit.co/template-kit/photo-gallery-section/https:/dexico.templatekit.co/wp-content/uploads/sites/26/2020/09/modern-house.jpg (from https://dexico.templatekit.co/template-kit/photo-gallery-section/)
+10:55:32	Error: 	"Not Found" (404) at link https://dexico.templatekit.co/template-kit/photo-gallery-section/https:/dexico.templatekit.co/wp-content/uploads/sites/26/2020/09/large-modern-lamp.jpg (from https://dexico.templatekit.co/template-kit/photo-gallery-section/)
+10:55:32	Error: 	"Not Found" (404) at link https://dexico.templatekit.co/template-kit/photo-gallery-section/https:/dexico.templatekit.co/wp-content/uploads/sites/26/2020/09/modern-bedroom-interior.jpg (from https://dexico.templatekit.co/template-kit/photo-gallery-section/)
+10:55:32	Error: 	"Not Found" (404) at link https://dexico.templatekit.co/template-kit/photo-gallery-section/https:/dexico.templatekit.co/wp-content/uploads/sites/26/2020/09/open-space-living-room-and-kitchen-in-glamour-family-house.jpg (from https://dexico.templatekit.co/template-kit/photo-gallery-section/)
+10:55:32	Error: 	"Not Found" (404) at link https://dexico.templatekit.co/template-kit/photo-gallery-section/https:/dexico.templatekit.co/wp-content/uploads/sites/26/2020/09/armchair-and-cabinet.jpg (from https://dexico.templatekit.co/template-kit/photo-gallery-section/)
+10:55:32	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=658
+10:55:32	Warning: 	File has moved from https://dexico.templatekit.co/?p=658 to https://dexico.templatekit.co/template-kit/about-us-section/
+10:55:33	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=269
+10:55:33	Warning: 	File has moved from https://dexico.templatekit.co/?p=269 to https://dexico.templatekit.co/2020/08/14/im-going-to-tell-you-the-biggest-secret-about-competing-on-masterchef/
+10:55:33	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=268
+10:55:33	Warning: 	File has moved from https://dexico.templatekit.co/?p=268 to https://dexico.templatekit.co/2020/08/14/how-introverts-can-be-effective-activists/
+10:55:33	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=267
+10:55:33	Warning: 	File has moved from https://dexico.templatekit.co/?p=267 to https://dexico.templatekit.co/2020/08/14/why-do-all-websites-look-the-same/
+10:55:33	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=654
+10:55:33	Warning: 	File has moved from https://dexico.templatekit.co/?p=654 to https://dexico.templatekit.co/template-kit/propertys-grid-section-v2/
+10:55:33	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=651
+10:55:33	Warning: 	File has moved from https://dexico.templatekit.co/?p=651 to https://dexico.templatekit.co/template-kit/about-company-video-section/
+10:55:33	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=648
+10:55:33	Warning: 	File has moved from https://dexico.templatekit.co/?p=648 to https://dexico.templatekit.co/template-kit/search-form-section/
+10:55:33	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=645
+10:55:33	Warning: 	File has moved from https://dexico.templatekit.co/?p=645 to https://dexico.templatekit.co/template-kit/testimonial-section/
+10:55:33	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=642
+10:55:33	Warning: 	File has moved from https://dexico.templatekit.co/?p=642 to https://dexico.templatekit.co/template-kit/about-company-section/
+10:55:33	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=638
+10:55:33	Warning: 	File has moved from https://dexico.templatekit.co/?p=638 to https://dexico.templatekit.co/template-kit/property-gallery-section/
+10:55:33	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=635
+10:55:33	Warning: 	File has moved from https://dexico.templatekit.co/?p=635 to https://dexico.templatekit.co/template-kit/propertys-grid/
+10:55:33	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=632
+10:55:33	Warning: 	File has moved from https://dexico.templatekit.co/?p=632 to https://dexico.templatekit.co/template-kit/location-sections/
+10:55:33	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=628
+10:55:33	Warning: 	File has moved from https://dexico.templatekit.co/?p=628 to https://dexico.templatekit.co/template-kit/hero-section-variant-1/
+10:55:33	Warning: 	Moved Permanently for https://dexico.templatekit.co/?p=13
+10:55:33	Warning: 	File has moved from https://dexico.templatekit.co/?p=13 to https://dexico.templatekit.co/template-kit/home/
+
+HTTrack Website Copier/3.49-2 mirror complete in 4 minutes 7 seconds : 514 links scanned, 444 files written (50244887 bytes overall) [41999260 bytes received at 170037 bytes/sec], 13488127 bytes transferred using HTTP compression in 249 files, ratio 23%, 59.4 requests per connection
+(23 errors, 90 warnings, 0 messages)
