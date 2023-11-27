@@ -1,16 +1,13 @@
 $(document).ready(showApartment);
-
 let currentPage=0;
 
-
-
-function showApartment(pageNo = 0, pageSize = 5) {
+function showApartment( pageNo = 0, pageSize = 5) {
     $.ajax({
         type: "GET",
         url: "http://localhost:8080/api/apartments",
         data: {
             pageNo: currentPage,
-            pageSize: 5
+            pageSize: 3
         },
         success: function (data) {
             let contentWeb = "";
@@ -93,7 +90,7 @@ function showApartment(pageNo = 0, pageSize = 5) {
                     \t\t\t\t\t\t\t\t\t\t\t</span>
                                                     </h5>
                                                     <p class="elementor-icon-box-description">
-                                                        ${data.content[i].name}</p>
+                                                        ${data.content[i].name + i}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -152,10 +149,12 @@ function showApartment(pageNo = 0, pageSize = 5) {
 
                     </section>`
             }
+            for (let i = 1; i <= data.totalPages; i++) {
+                paging += `<li class="page-item"><a class="page-link" href="#" >${i}</a></li>`;
+            }
             document.getElementById("show-apartment").innerHTML = contentWeb;
+            document.getElementById("pagination").innerHTML=paging;
 
-            console.log(data.content.length);
-            console.log(data.content);
         }
 
 })
@@ -165,8 +164,8 @@ function nextPage() {
     currentPage++;
     showApartment();
 }
-function previousPage(){
-    if (currentPage===0){
+function previousPage() {
+    if (currentPage === 0) {
         return;
     }
     currentPage--;

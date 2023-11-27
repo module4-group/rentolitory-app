@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/fe-md4.iml" filepath="$PROJECT_DIR$/.idea/fe-md4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/rentalitory-app.iml" filepath="$PROJECT_DIR$/.idea/rentalitory-app.iml" />
     </modules>
   </component>
 </project>

@@ -106,8 +106,8 @@ function showAddress(e) {
                     <td>${data[i].activated}</td>
                     <td>
 <!--                        <a href="update.html" onclick="updateAddress(${data})" type="button" class="btn btn-primary">Update</a>-->
-                        <button onclick="updateAddress(${data[i]})" type="submit" class="btn btn-primary">Update</button>
-                        <button  onclick="deleteAddress(${data[i].id})" type="submit" class="btn btn-danger">Delete</button>
+                        <button onclick="updateAddress(${data[i].id})" type="submit" class="btn btn-primary">Update</button>
+                        <button onclick="deleteAddress(${data[i].id})" type="submit" class="btn btn-danger">Delete</button>
                     </td>
                 </tr>
             `

@@ -64,14 +64,42 @@ function checkPasswordMatch(input1, input2) {
     }
 }
 
-
-//Event Listeners
-form.addEventListener('submit',function(e) {
-    e.preventDefault();
-
-    checkRequired([username, email, password, password2]);
-    checkLength(username,3,15);
-    checkLength(password,6,25);
-    checkEmail(email);
-    checkPasswordMatch(password, password2);
-});
+$(document).ready(showUser);
+function showUser(){
+    let content = "";
+    return $.ajax({
+        type:"GET",
+        url:"http://localhost:8080/api/user",
+        success: function (data){
+            for (let i = 0; i < data.length; i++) {
+                content += `
+                <tr>
+                    <th scope="row">${data[i].id}</th>
+                    <td>${data[i].fullName}</td>
+                    <td>${data[i].username}</td>
+                    <td>${data[i].email}</td>
+                    <td>${data[i].phoneNumber}</td>
+                    <td>${data[i].avatar}</td>
+                    <td>${data[i].activated}</td>
+                    <td>
+                        <a type="button" class="btn btn-primary" href="update.html" >Update</a>
+                        <button onclick="deleteUser(${data[i].id})" type="button" class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+                `
+            }
+            document.getElementById("showUser").innerHTML = content;
+        }
+    })
+}
+function deleteUser(id) {
+    $.ajax({
+        type: "DELETE",
+        //tên API
+        url: `http://localhost:8080/api/user/${id}`,
+        //xử lý khi thành công
+        success: showUser
+    });
+}
+//b1: lấy building id
+// b2: viết function lấy đầu getAPI của building bằng return $.ajax
