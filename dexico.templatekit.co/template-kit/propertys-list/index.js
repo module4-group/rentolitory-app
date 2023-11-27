@@ -1,6 +1,9 @@
 $(document).ready(showApartment);
 
 let currentPage=0;
+
+
+
 function showApartment(pageNo = 0, pageSize = 5) {
     $.ajax({
         type: "GET",
@@ -152,6 +155,7 @@ function showApartment(pageNo = 0, pageSize = 5) {
             document.getElementById("show-apartment").innerHTML = contentWeb;
 
             console.log(data.content.length);
+            console.log(data.content);
         }
 
 })
