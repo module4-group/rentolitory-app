@@ -268,7 +268,7 @@ nav.close ~ .dashboard .top{
     border-radius: 50%;
 }
 .dashboard .dash-content{
-    padding-top: 25px;
+    padding-top: 60px;
 }
 .dash-content .title{
     display: flex;

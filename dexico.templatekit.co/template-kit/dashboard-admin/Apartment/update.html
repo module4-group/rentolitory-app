@@ -7,56 +7,95 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/form.css">
     <script src="js/form.js"></script>
 </head>
 <body>
 <form class="whatsapp-form">
     <h1>Update Apartment</h1>
-    <div class="datainput">
-        <input class="validate" id="name" name="name" required="" type="text" value=''/>
+    <div id="showDataOld"></div>
+</form>
+
+<script>
+    $(document).ready(showDataOld);
+    function getIdFromUrl() {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        return urlParams.get('id');
+    }
+
+    // Sử dụng giá trị id lấy từ URL
+    const apartmentId = getIdFromUrl();
+
+    function showDataOld() {
+        let contentDataOld = "";
+        $.ajax({
+            type: "GET",
+            url: `http://localhost:8080/api/apartments/${apartmentId}`,
+            success: function (data) {
+                contentDataOld = `
+                <div class="datainput">
+        <input class="validate" id="name" name="name" required="" type="text" value=${data.name} />
         <span class="highlight"></span><span class="bar"></span>
         <label>Apartment name</label>
     </div>
     <div class="datainput">
-        <input class="validate" id="room_number" name="room_number" required="" type="number" value=''/>
+        <input class="validate" id="room_number" name="room_number" required="" type="number" value=${data.roomNumber} />
         <span class="highlight"></span><span class="bar"></span>
         <label>Room Number</label>
     </div>
     <div class="datainput">
-        <input class="validate" id="area" name="area" required="" type="number" value=''/>
+        <input class="validate" id="area" name="area" required="" type="number" value=${data.area} />
         <span class="highlight"></span><span class="bar"></span>
         <label>Area</label>
     </div>
     <div class="datainput">
-        <input class="validate" id="number_of_bedroom" name="number_of_bedroom" required="" type="number" value=''/>
+        <input class="validate" id="number_of_bedroom" name="number_of_bedroom" required="" type="number" value=${data.numberOfBedroom} />
         <span class="highlight"></span><span class="bar"></span>
         <label>Number Of Bedroom</label>
     </div>
     <div class="datainput">
-        <input class="validate" id="monthly_rent" name="monthly_rent" required="" type="number" value=''/>
+        <input class="validate" id="monthly_rent" name="monthly_rent" required="" type="number" value=${data.numberOfRoom} />
         <span class="highlight"></span><span class="bar"></span>
         <label>Monthly Rent</label>
     </div>
     <div class="datainput">
-        <input class="validate" id="max_tenant" name="max_tenant" required="" type="number" value=''/>
+        <input class="validate" id="max_tenant" name="max_tenant" required="" type=" number" value=${data.maxTenants} />
         <span class="highlight"></span><span class="bar"></span>
         <label>Max Tenant</label>
     </div>
     <div class="datainput">
         <select id="building">
-            <option hidden='hidden' selected='selected' value='default'>Choose Building</option>
-            <option value="1">List Option 1</option>
-            <option value="2">List Option 2</option>
-            <option value="3">List Option 3</option>
+            <option value="${data.building.id}">${data.building.buildingName}</option>
         </select>
     </div>
 
     <button class="send_form" type="submit" title="Send to Whatsapp">Submit</button>
-    <div id="text-info"></div>
-</form>
 
+                `
+                document.getElementById("showDataOld").innerHTML = contentDataOld;
+                console.log(data)
+            }
+        })
+    }
+    function showApartmentList() {
+        let contentApartment = "";
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/api/apartments",
+            success: function (data) {
+
+            }
+        })
+
+    }
+</script>
 </body>
 </html>
