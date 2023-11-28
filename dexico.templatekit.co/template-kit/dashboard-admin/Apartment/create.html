@@ -64,9 +64,6 @@
                     contentBuilding += `
                         <option value=${data.content[i].building.id}>${data.content[i].building.buildingName}</option>
                     `
-                    // console.log(data.content[i].building)
-                    // console.log(data.content[i].building.buildingName)
-
                 }
                 document.getElementById("building").innerHTML = contentBuilding;
             }
@@ -81,7 +78,7 @@
         </select>
     </div>
 
-    <button onclick="addApartment()" class="send_form" type="submit">Submit</button>
+    <button onclick="addApartment()" class="send_form" type="button">Submit</button>
     <div id="text-info"></div>
 </form>
 

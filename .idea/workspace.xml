@@ -7,15 +7,13 @@
     <list default="true" id="333da09a-33bd-4763-b6f2-22df70cb06e7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/index-delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/index-delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/js/form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Building/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Building/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Building/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Building/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Building/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Building/js/form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/login-register/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/login-register/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/login-register/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/login-register/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Landlord/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Landlord/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Landlord/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Landlord/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Landlord/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Landlord/js/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Landlord/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Landlord/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Landlord/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Landlord/update.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,22 +70,11 @@
       <workItem from="1701138056367" duration="16127000" />
       <workItem from="1701165869169" duration="1114000" />
       <workItem from="1701167489688" duration="2017000" />
-      <workItem from="1701179798915" duration="1383000" />
+      <workItem from="1701179798915" duration="11253000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/update.html</url>
-          <line>27</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
