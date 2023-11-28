@@ -198,3 +198,4 @@ function updateApartment(id) {
         }
     })
 }
+

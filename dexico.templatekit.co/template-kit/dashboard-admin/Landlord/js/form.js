@@ -103,6 +103,13 @@ function showLandlordList() {
             }
 
             document.getElementById("showLandlord").innerHTML = contentLandLord;
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/api/landlords/search",
+            success:function (){
+                console.log("hello")
+            }
+        })
         }
     })
 }
@@ -199,4 +206,17 @@ function updateLandlord(id){
     })
 }
 
+function search(){
+    let inputSearch = $('#inputSearch').val();
+
+    $.ajax({
+        type:"GET",
+        url:`http://localhost:8080/api/landlords/search`,
+
+        success:function () {
+            console.log("hello")
+
+        }
+    })
+}
 $(document).ready(showLandlordList);
