@@ -3,8 +3,11 @@ let currentPage=0;
 
 function showApartment( pageNo = 0, pageSize = 5) {
     $.ajax({
+        headers: {
+            "Authorization": "Bearer " + localStorage.getItem('authToken')
+        },
         type: "GET",
-        url: "http://localhost:8080/api/apartments",
+        url: "http://localhost:8080/api/apartments/list",
         data: {
             pageNo: currentPage,
             pageSize: 3

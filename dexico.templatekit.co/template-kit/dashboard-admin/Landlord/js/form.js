@@ -21,20 +21,20 @@ function showSucces(input) {
 //check email is valid
 function checkEmail(input) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if(re.test(input.value.trim())) {
+    if (re.test(input.value.trim())) {
         showSucces(input)
-    }else {
-        showError(input,'Email is not invalid');
+    } else {
+        showError(input, 'Email is not invalid');
     }
 }
 
 
 //checkRequired fields
 function checkRequired(inputArr) {
-    inputArr.forEach(function(input){
-        if(input.value.trim() === ''){
-            showError(input,`${getFieldName(input)} is required`)
-        }else {
+    inputArr.forEach(function (input) {
+        if (input.value.trim() === '') {
+            showError(input, `${getFieldName(input)} is required`)
+        } else {
             showSucces(input);
         }
     });
@@ -42,12 +42,12 @@ function checkRequired(inputArr) {
 
 
 //check input Length
-function checkLength(input, min ,max) {
-    if(input.value.length < min) {
+function checkLength(input, min, max) {
+    if (input.value.length < min) {
         showError(input, `${getFieldName(input)} must be at least ${min} characters`);
-    }else if(input.value.length > max) {
+    } else if (input.value.length > max) {
         showError(input, `${getFieldName(input)} must be les than ${max} characters`);
-    }else {
+    } else {
         showSucces(input);
     }
 }
@@ -59,7 +59,7 @@ function getFieldName(input) {
 
 // check passwords match
 function checkPasswordMatch(input1, input2) {
-    if(input1.value !== input2.value) {
+    if (input1.value !== input2.value) {
         showError(input2, 'Passwords do not match');
     }
 }
@@ -79,6 +79,9 @@ function checkPasswordMatch(input1, input2) {
 function showLandlordList() {
     let contentLandLord = "";
     $.ajax({
+        headers: {
+            "Authorization": "Bearer " + localStorage.getItem('authToken')
+        },
         type: "GET",
         url: "http://localhost:8080/api/landlords",
         success: function (data) {
@@ -107,7 +110,7 @@ function showLandlordList() {
     })
 }
 
-function addLandlord(event){
+function addLandlord(event) {
     let fullName = $("#fullName").val();
     let username = $("#username").val();
     let password = $("#password").val();
@@ -121,7 +124,7 @@ function addLandlord(event){
         username: username,
         password: password,
         email: email,
-        address:address,
+        address: address,
         phoneNumber: phoneNumber,
         avatar: avatar,
     };
@@ -129,6 +132,7 @@ function addLandlord(event){
         type: "POST",
         url: "http://localhost:8080/api/landlords/register",
         headers: {
+            "Authorization": "Bearer " + localStorage.getItem('authToken'),
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
@@ -155,17 +159,18 @@ function addLandlord(event){
 function deleteLandlord(id) {
     $.ajax({
         type: "DELETE",
-        //tên API
+        headers: {
+            "Authorization": "Bearer " + localStorage.getItem('authToken')
+        },
         url: `http://localhost:8080/api/landlords/${id}`,
-        //xử lý khi thành công
-        success: function (){
+        success: function () {
             alert("Xóa thành công");
-            window.location.href="http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/Landlord/index.html"
+            window.location.href = "http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/Landlord/index.html"
         }
     });
 }
 
-function updateLandlord(id){
+function updateLandlord(id) {
     let fullName = $("#fullName").val();
     let username = $("#username").val();
     let password = $("#password").val();
@@ -179,22 +184,23 @@ function updateLandlord(id){
         username: username,
         password: password,
         email: email,
-        address:address,
+        address: address,
         phoneNumber: phoneNumber,
         avatar: avatar,
     }
 
     $.ajax({
         headers: {
+            "Authorization": "Bearer " + localStorage.getItem('authToken'),
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
         type: "PUT",
         data: JSON.stringify(updateData),
         url: `http://localhost:8080/api/landlords/${id}`,
-        success: function (){
+        success: function () {
             alert("Cập nhật thành công ")
-            window.location.href="http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/Landlord/index.html"
+            window.location.href = "http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/Landlord/index.html"
         }
     })
 }

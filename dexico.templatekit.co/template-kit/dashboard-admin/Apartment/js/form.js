@@ -100,15 +100,16 @@ function addApartment() {
 
     $.ajax({
         headers: {
+            "Authorization": "Bearer " + localStorage.getItem('authToken'),
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
         type: "POST",
         data: JSON.stringify(newApartment),
         url: "http://localhost:8080/api/apartments/add",
-        success: function (){
+        success: function () {
             alert("Tạo thành công");
-            window.location.href="http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/index.html"
+            window.location.href = "http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/index.html"
         }
     })
 }
@@ -116,8 +117,12 @@ function addApartment() {
 function showApartmentList() {
     let contentApartment = "";
     $.ajax({
+
         type: "GET",
-        url: "http://localhost:8080/api/apartments",
+        url: "http://localhost:8080/api/apartments/list",
+        headers: {
+            "Authorization": "Bearer " + localStorage.getItem('authToken')
+        },
         success: function (data) {
             for (let i = 0; i < data.content.length; i++) {
                 if (data.content[i].activated == true) {
@@ -149,16 +154,18 @@ function showApartmentList() {
 }
 
 
-
 function deleteApartment(id) {
     $.ajax({
+        headers: {
+            "Authorization": "Bearer " + localStorage.getItem('authToken')
+        },
         type: "DELETE",
         //tên API
         url: `http://localhost:8080/api/apartments/${id}`,
         //xử lý khi thành công
-        success: function (){
+        success: function () {
             alert("Xóa thành công");
-            window.location.href="http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/index.html"
+            window.location.href = "http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/index.html"
         }
     });
 }
@@ -186,15 +193,16 @@ function updateApartment(id) {
 
     $.ajax({
         headers: {
+            "Authorization": "Bearer " + localStorage.getItem('authToken'),
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
         type: "PUT",
         data: JSON.stringify(updateApartment),
         url: `http://localhost:8080/api/apartments/${id}`,
-        success: function (){
+        success: function () {
             alert("Cập nhật thành công ")
-            window.location.href="http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/index.html"
+            window.location.href = "http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/index.html"
         }
     })
 }

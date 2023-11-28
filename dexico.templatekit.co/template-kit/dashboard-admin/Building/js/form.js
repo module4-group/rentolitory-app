@@ -80,6 +80,9 @@ $(document).ready(showBuilding);
 function showBuilding() {
     let contentBuilding = "";
     $.ajax({
+        headers: {
+            "Authorization": "Bearer " + localStorage.getItem('authToken')
+        },
         type: "GET",
         url: "http://localhost:8080/api/buildings",
         success: function (data) {
@@ -129,7 +132,8 @@ function addBuilding() {
     console.log(newBuilding)
 
     $.ajax({
-        headers: {
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem('authToken'),
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },

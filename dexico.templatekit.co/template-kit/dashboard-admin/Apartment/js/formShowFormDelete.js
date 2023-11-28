@@ -3,8 +3,11 @@ $(document).ready(showApartmentListDelete);
 function showApartmentListDelete() {
     let contentApartmentDelete = "";
     $.ajax({
+        headers: {
+            "Authorization": "Bearer " + localStorage.getItem('authToken')
+        },
         type: "GET",
-        url: "http://localhost:8080/api/apartments",
+        url: "http://localhost:8080/api/apartments/list",
         success: function (data) {
             for (let i = 0; i < data.content.length; i++) {
                 if (data.content[i].activated == false) {

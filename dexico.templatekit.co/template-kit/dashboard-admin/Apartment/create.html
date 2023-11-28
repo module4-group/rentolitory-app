@@ -57,12 +57,17 @@
         function showBuilding() {
             let contentBuilding = "";
             $.ajax({
+                headers: {
+                    "Authorization": "Bearer " + localStorage.getItem('authToken')
+                },
                 type: "GET",
-                url: "http://localhost:8080/api/apartments",
+                url: "http://localhost:8080/api/buildings",
                 success: function (data) {
-                    for (let i = 0; i < data.content.length; i++) {
+                    console.log(data);
+
+                    for (let i = 0; i < data.length; i++) {
                         contentBuilding += `
-                        <option value=${data.content[i].building.id}>${data.content[i].building.buildingName}</option>
+                        <option value=${data[i].id}>${data[i].buildingName}</option>
                     `
                     }
                     document.getElementById("building").innerHTML = contentBuilding;
