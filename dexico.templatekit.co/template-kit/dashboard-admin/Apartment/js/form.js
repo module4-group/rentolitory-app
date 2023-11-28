@@ -88,14 +88,14 @@ function addApartment() {
     let maxTenants = $('#max_tenant').val();
     let buildingId = $('#building').val();
     let newApartment = {
-        name:name,
-        roomNumber:roomNumber,
-        area:area,
-        numberOfBedroom:numberOfBedroom,
-        numberOfRoom:numberOfRoom,
-        monthlyRent:monthlyRent,
-        maxTenants:maxTenants,
-        buildingId:buildingId
+        name: name,
+        roomNumber: roomNumber,
+        area: area,
+        numberOfBedroom: numberOfBedroom,
+        numberOfRoom: numberOfRoom,
+        monthlyRent: monthlyRent,
+        maxTenants: maxTenants,
+        buildingId: buildingId
     }
 
     $.ajax({
@@ -117,7 +117,7 @@ function showApartmentList() {
         url: "http://localhost:8080/api/apartments",
         success: function (data) {
             for (let i = 0; i < data.content.length; i++) {
-                if (data.content[i].activated == true){
+                if (data.content[i].activated == true) {
                     contentApartment += `
                     
                 <tr>
@@ -128,13 +128,11 @@ function showApartmentList() {
                     <td>${data.content[i].numberOfBedroom}</td>
                     <td>${data.content[i].monthlyRent}</td>
                     <td>${data.content[i].maxTenants}</td>
-                    <td>${data.content[i].building.id}</td>
+                    <td>${data.content[i].building.buildingName}</td>
                     <td>${data.content[i].activated}</td>
                     <td>
                          
-                        <a href="update.html?id=${data.content[i].id}" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Update
-</a> 
+                        <a href="update.html?id=${data.content[i].id}" class="btn btn-primary">Update</a> 
                         <button type="button" onclick="deleteApartment(${data.content[i].id})" class="btn btn-danger">Delete</button>
                     </td>
                 </tr>`
@@ -142,43 +140,14 @@ function showApartmentList() {
                 document.getElementById("showApartmentList").innerHTML = contentApartment;
 
             }
-                // console.log(data)
+            // console.log(data)
         }
     })
 }
 
-// function showApartmentListDelete() {
-//     let contentApartmentDelete = "";
-//     $.ajax({
-//         type: "GET",
-//         url: "http://localhost:8080/api/apartments",
-//         success: function (data) {
-//             for (let i = 0; i < data.content.length; i++) {
-//                     contentApartmentDelete += `
-//                 <tr>
-//                 <th scope="row">${data.content[i].id}</th>
-//                     <td>${data.content[i].name}</td>
-//                     <td>${data.content[i].roomNumber}</td>
-//                     <td>${data.content[i].area}</td>
-//                     <td>${data.content[i].numberOfBedroom}</td>
-//                     <td>${data.content[i].monthlyRent}</td>
-//                     <td>${data.content[i].maxTenants}</td>
-//                     <td>${data.content[i].building.id}</td>
-//                     <td>${data.content[i].activated}</td>
-//                     <td>
-//                         <a type="button" class="btn btn-primary" href="update.html" >Update</a>
-//                         <button type="button" onclick="deleteApartment(${data.content[i].id})" class="btn btn-danger">Delete</button>
-//                     </td>
-//                 </tr>`
-//                 }
-//                 document.getElementById("showApartmentListDelete").innerHTML = contentApartmentDelete;
-//
-//
-//             console.log(data)
-//         }
-//     })
-// }
-function deleteApartment(id){
+
+
+function deleteApartment(id) {
     $.ajax({
         type: "DELETE",
         //tên API
@@ -188,3 +157,35 @@ function deleteApartment(id){
     });
 }
 
+function updateApartment(id) {
+
+    let name = $('#name').val();
+    let roomNumber = $('#room_number').val();
+    let area = $('#area').val();
+    let numberOfBedroom = $('#number_of_bedroom').val();
+    let numberOfRoom = $('#number_of_room').val();
+    let monthlyRent = $('#monthly_rent').val();
+    let maxTenants = $('#max_tenant').val();
+    let buildingId = $('#building').val();
+    let updateApartment = {
+        name: name,
+        roomNumber: roomNumber,
+        area: area,
+        numberOfBedroom: numberOfBedroom,
+        numberOfRoom: numberOfRoom,
+        monthlyRent: monthlyRent,
+        maxTenants: maxTenants,
+        buildingId: buildingId
+    }
+
+    $.ajax({
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        type: "PUT",
+        data: JSON.stringify(updateApartment),
+        url: `http://localhost:8080/api/apartments/${id}`,
+        success: showApartmentList
+    })
+}
