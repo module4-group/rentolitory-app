@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="333da09a-33bd-4763-b6f2-22df70cb06e7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/login-logout/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/login-logout/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/js/form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/login-register/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/login-register/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/login-logout/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +72,7 @@
       <workItem from="1701137806265" duration="5310000" />
       <workItem from="1701155283782" duration="8810000" />
       <workItem from="1701171359923" duration="73000" />
-      <workItem from="1701179415879" duration="598000" />
+      <workItem from="1701179415879" duration="1591000" />
     </task>
     <servers />
   </component>
