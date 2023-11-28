@@ -66,12 +66,81 @@ function checkPasswordMatch(input1, input2) {
 
 
 //Event Listeners
-form.addEventListener('submit',function(e) {
-    e.preventDefault();
+// form.addEventListener('submit',function(e) {
+//     e.preventDefault();
+//
+//     checkRequired([username, email, password, password2]);
+//     checkLength(username,3,15);
+//     checkLength(password,6,25);
+//     checkEmail(email);
+//     checkPasswordMatch(password, password2);
+// });
+$(document).ready(showBuilding);
 
-    checkRequired([username, email, password, password2]);
-    checkLength(username,3,15);
-    checkLength(password,6,25);
-    checkEmail(email);
-    checkPasswordMatch(password, password2);
-});
+function showBuilding() {
+    let contentBuilding = "";
+    $.ajax({
+        type: "GET",
+        url: "http://localhost:8080/api/buildings",
+        success: function (data) {
+            console.log(data);
+            for (let i = 0; i < data.length; i++) {
+                contentBuilding += `
+
+                <tr>
+                <th scope="row">${data[i].id}</th>
+                    <td>${data[i].buildingName}</td>
+                    <td>${data[i].city}</td>
+                    <td>${data[i].district}</td>
+                    <td>${data[i].ward}</td>
+                    <td>${data[i].houseNumber}</td>
+                    <td>${data[i].landlord.fullName}</td>
+                    <td>${data[i].activated}</td>
+                   
+                    <td>
+
+                        <a href="update.html" class="btn btn-primary">Update</a>
+                        <button type="button" onclick="${data[i].id}" class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>`
+                }
+                document.getElementById("showBuilding").innerHTML = contentBuilding;
+
+            }
+            // console.log(data)
+        // }
+    })
+}
+function addBuilding() {
+    let buildingName = $('#building_name').val();
+    let city = $('#city').val();
+    let district = $('#district').val();
+    let ward = $('#ward').val();
+    let houseNumber = $('#houseNumber').val();
+    let landlordId = $('#landlord_id').val();
+    let newBuilding = {
+        buildingName: buildingName,
+        city: city,
+        district: district,
+        ward: ward,
+        houseNumber: houseNumber,
+        landlordId: landlordId
+    };
+    console.log(newBuilding)
+
+    $.ajax({
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        type: "POST",
+        data: JSON.stringify(newBuilding),
+        url: "http://localhost:8080/api/buildings/create",
+        success: function() {
+            showBuilding();
+        },
+        error: function() {
+            console.log("error")
+        }
+    })
+}

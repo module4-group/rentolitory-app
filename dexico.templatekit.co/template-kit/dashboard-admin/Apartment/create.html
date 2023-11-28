@@ -53,148 +53,37 @@
         <span class="highlight"></span><span class="bar"></span>
         <label>Max Tenant</label>
     </div>
-<script>
-    function showBuilding() {
-        let contentBuilding = "";
-        $.ajax({
-            type: "GET",
-            url: "http://localhost:8080/api/apartments",
-            success: function (data) {
-                for (let i = 0; i < data.content.length; i++) {
-                    contentBuilding += `
+    <script>
+        function showBuilding() {
+            let contentBuilding = "";
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:8080/api/apartments",
+                success: function (data) {
+                    for (let i = 0; i < data.content.length; i++) {
+                        contentBuilding += `
                         <option value=${data.content[i].building.id}>${data.content[i].building.buildingName}</option>
                     `
-                    // console.log(data.content[i].building)
-                    // console.log(data.content[i].building.buildingName)
+                        // console.log(data.content[i].building)
+                        // console.log(data.content[i].building.buildingName)
 
+                    }
+                    document.getElementById("building").innerHTML = contentBuilding;
                 }
-                document.getElementById("building").innerHTML = contentBuilding;
-            }
-        })
-    }
+            })
+        }
 
-    $(document).ready(showBuilding);
+        $(document).ready(showBuilding);
 
-</script>
+    </script>
     <div class="datainput">
         <select id="building">
-<<<<<<< HEAD
-            <option hidden='hidden' selectd='selected' value='default'>Choose Building</option>
-            <option value="1">List Option 1</option>
-            <option value="2">List Option 2</option>
-            <option value="3">List Option 3</option>
-=======
-
-
-
->>>>>>> 47fe69c8fbed87e8b6d975302fe079bf02765548
         </select>
     </div>
-<!--    <div class="datainput">-->
-<!--        <input class="validate" id="building_name" name="building_name" required="" type="text" value=''/>-->
-<!--        <span class="highlight"></span><span class="bar"></span>-->
-<!--        <label>Building Name</label>-->
-<!--    </div>-->
-<!--    <div class="datainput">-->
-<!--        <select id="city">-->
-<!--            <option value="" selected>Chọn tỉnh thành</option>-->
-<!--        </select>-->
 
-<!--        <select id="district">-->
-<!--            <option value="" selected>Chọn quận huyện</option>-->
-<!--        </select>-->
-
-<!--        <select id="ward">-->
-<!--            <option value="" selected>Chọn phường xã</option>-->
-<!--        </select>-->
-<!--    </div>-->
-<!--    <div class="datainput">-->
-<!--        <input class="validate" id="houseNumber" name="houseNumber" required="" type="text" value=''/>-->
-<!--        <span class="highlight"></span><span class="bar"></span>-->
-<!--        <label>House Number</label>-->
-<!--    </div>-->
-<!--    <div class="datainput">-->
-<!--        <input class="validate" id="fullName" name="full_name" required="" type="text" value=''/>-->
-<!--        <span class="highlight"></span><span class="bar"></span>-->
-<!--        <label>FullName</label>-->
-<!--    </div>-->
-<!--    <div class="datainput">-->
-<!--        <input class="validate" id="username" name="username" required="" type="text" value=''/>-->
-<!--        <span class="highlight"></span><span class="bar"></span>-->
-<!--        <label>Username</label>-->
-<!--    </div>-->
-<!--    <div class="datainput">-->
-<!--        <input class="validate" id="password" name="password" required="" type="password" value=''/>-->
-<!--        <span class="highlight"></span><span class="bar"></span>-->
-<!--        <label>Password</label>-->
-<!--    </div>-->
-<!--    <div class="datainput">-->
-<!--        <input class="validate" id="email" name="email" required="" type="email" value=''/>-->
-<!--        <span class="highlight"></span><span class="bar"></span>-->
-<!--        <label>Email</label>-->
-<!--    </div>-->
-
-<!--    <div class="datainput">-->
-<!--        <input class="validate" id="address" name="address" required="" type="text" value=''/>-->
-<!--        <span class="highlight"></span><span class="bar"></span>-->
-<!--        <label>Address</label>-->
-<!--    </div>-->
-
-<!--    <div class="datainput">-->
-<!--        <input class="validate" id="phone_number" name="phone_number" required="" type="number" value=''/>-->
-<!--        <span class="highlight"></span><span class="bar"></span>-->
-<!--        <label>Phone Number</label>-->
-<!--    </div>-->
-<!--    <div class="form-group">-->
-<!--        <label for="avatar">Avatar</label>-->
-<!--        <input type="file" class="form-control" id="avatar" name="avatar">-->
-<!--    </div>-->
     <button onclick="addApartment()" class="send_form" type="submit">Submit</button>
     <div id="text-info"></div>
 </form>
-
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>-->
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>-->
-<!--<script>-->
-<!--    const host = "https://provinces.open-api.vn/api/";-->
-<!--    var callAPI = (api) => {-->
-<!--        return axios.get(api)-->
-<!--            .then((response) => {-->
-<!--                renderData(response.data, "city");-->
-<!--            });-->
-<!--    }-->
-<!--    callAPI('https://provinces.open-api.vn/api/?depth=1');-->
-<!--    var callApiDistrict = (api) => {-->
-<!--        return axios.get(api)-->
-<!--            .then((response) => {-->
-<!--                renderData(response.data.districts, "district");-->
-<!--            });-->
-<!--    }-->
-<!--    var callApiWard = (api) => {-->
-<!--        return axios.get(api)-->
-<!--            .then((response) => {-->
-<!--                renderData(response.data.wards, "ward");-->
-<!--            });-->
-<!--    }-->
-
-<!--    var renderData = (array, select) => {-->
-<!--        let row = ' <option disable value="">Chọn</option>';-->
-<!--        array.forEach(element => {-->
-<!--            row += `<option data-id="${element.code}" value="${element.name}">${element.name}</option>`-->
-<!--        });-->
-<!--        document.querySelector("#" + select).innerHTML = row-->
-<!--    }-->
-
-<!--    $("#city").change(() => {-->
-<!--        callApiDistrict(host + "p/" + $("#city").find(':selected').data('id') + "?depth=2");-->
-
-<!--    });-->
-<!--    $("#district").change(() => {-->
-<!--        callApiWard(host + "d/" + $("#district").find(':selected').data('id') + "?depth=2");-->
-
-<!--    });-->
-
-<!--</script>-->
 
 </body>
 </html>

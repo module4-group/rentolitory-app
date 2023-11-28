@@ -5,8 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="333da09a-33bd-4763-b6f2-22df70cb06e7" name="Changes" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/index-delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/index-delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/js/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Building/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Building/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Building/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Building/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Building/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/dashboard-admin/Building/js/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/login-register/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/login-register/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/login-register/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/dexico.templatekit.co/template-kit/login-register/register.html" afterDir="false" />
+>>>>>>> 88ca5ef5c0d4059621ce3419def15d2ba3f925b4
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,11 +59,16 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+<<<<<<< HEAD
     &quot;git-widget-placeholder&quot;: &quot;kiet-bui&quot;,
+=======
+    &quot;git-widget-placeholder&quot;: &quot;dat-nguyen&quot;,
+>>>>>>> 88ca5ef5c0d4059621ce3419def15d2ba3f925b4
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+<<<<<<< HEAD
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -60,6 +79,11 @@
       <recent name="D:\study\module 4\rentalitory\rentalitory-app\dexico.templatekit.co" />
     </key>
   </component>
+=======
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+>>>>>>> 88ca5ef5c0d4059621ce3419def15d2ba3f925b4
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -69,10 +93,18 @@
       <option name="presentableId" value="Default" />
       <updated>1701067144142</updated>
       <workItem from="1701067147385" duration="13722000" />
+<<<<<<< HEAD
       <workItem from="1701137806265" duration="5310000" />
       <workItem from="1701155283782" duration="8810000" />
       <workItem from="1701171359923" duration="73000" />
       <workItem from="1701179415879" duration="1591000" />
+=======
+      <workItem from="1701091499660" duration="4816000" />
+      <workItem from="1701138056367" duration="16127000" />
+      <workItem from="1701165869169" duration="1114000" />
+      <workItem from="1701167489688" duration="2017000" />
+      <workItem from="1701179798915" duration="1383000" />
+>>>>>>> 88ca5ef5c0d4059621ce3419def15d2ba3f925b4
     </task>
     <servers />
   </component>

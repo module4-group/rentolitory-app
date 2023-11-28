@@ -62,6 +62,11 @@
         <label>Number Of Bedroom</label>
     </div>
     <div class="datainput">
+        <input class="validate" id="number_of_room" name="number_of_room" required="" type="number" value=${data.numberOfBedroom} />
+        <span class="highlight"></span><span class="bar"></span>
+        <label>Number Of Room</label>
+    </div>
+    <div class="datainput">
         <input class="validate" id="monthly_rent" name="monthly_rent" required="" type="number" value=${data.numberOfRoom} />
         <span class="highlight"></span><span class="bar"></span>
         <label>Monthly Rent</label>
@@ -73,11 +78,11 @@
     </div>
     <div class="datainput">
         <select id="building">
-            <option value="${data.building.id}">${data.building.buildingName}</option>
+            <option hidden="hidden" value="${data.building.id}">${data.building.buildingName}</option>
         </select>
     </div>
 
-    <button class="send_form" type="submit" title="Send to Whatsapp">Submit</button>
+    <button onclick="updateApartment(${data.id})" class="send_form" type="submit">Submit</button>
 
                 `
                 document.getElementById("showDataOld").innerHTML = contentDataOld;
@@ -85,17 +90,7 @@
             }
         })
     }
-    function showApartmentList() {
-        let contentApartment = "";
-        $.ajax({
-            type: "GET",
-            url: "http://localhost:8080/api/apartments",
-            success: function (data) {
 
-            }
-        })
-
-    }
 </script>
 </body>
 </html>

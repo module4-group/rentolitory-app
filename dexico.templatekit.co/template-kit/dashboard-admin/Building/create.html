@@ -6,7 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Document</title>
+    <title>Create Building</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/form.css">
@@ -20,26 +21,104 @@
         <span class="highlight"></span><span class="bar"></span>
         <label>Building Name</label>
     </div>
-    <div class="datainput">
-        <select id="address_id">
-            <option hidden='hidden' selected='selected' value='default'>Choose Address</option>
-            <option value="1">List Option 1</option>
-            <option value="2">List Option 2</option>
-            <option value="3">List Option 3</option>
-        </select>
-    </div>
+    <label>Address:</label>
+
+    <div>
+            <select id="city">
+                <option value="" selected>Chọn tỉnh thành</option>
+            </select>
+
+            <select id="district">
+                <option value="" selected>Chọn quận huyện</option>
+            </select>
+
+            <select id="ward">
+                <option value="" selected>Chọn phường xã</option>
+            </select>
+        </div>
+
+        <div class="datainput">
+            <input class="validate" id="houseNumber" name="house_number" required="" type="text" value=''/>
+            <span class="highlight"></span><span class="bar"></span>
+            <label>House Number</label>
+        </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script>
+        const host = "https://provinces.open-api.vn/api/";
+        var callAPI = (api) => {
+            return axios.get(api)
+                .then((response) => {
+                    renderData(response.data, "city");
+                });
+        }
+        callAPI('https://provinces.open-api.vn/api/?depth=1');
+        var callApiDistrict = (api) => {
+            return axios.get(api)
+                .then((response) => {
+                    renderData(response.data.districts, "district");
+                });
+        }
+        var callApiWard = (api) => {
+            return axios.get(api)
+                .then((response) => {
+                    renderData(response.data.wards, "ward");
+                });
+        }
+
+        var renderData = (array, select) => {
+            let row = ' <option disable value="">Chọn</option>';
+            array.forEach(element => {
+                row += `<option data-id="${element.code}" value="${element.name}">${element.name}</option>`
+            });
+            document.querySelector("#" + select).innerHTML = row
+        }
+
+        $("#city").change(() => {
+            callApiDistrict(host + "p/" + $("#city").find(':selected').data('id') + "?depth=2");
+
+        });
+        $("#district").change(() => {
+            callApiWard(host + "d/" + $("#district").find(':selected').data('id') + "?depth=2");
+
+        });
+
+    </script>
+
     <div class="datainput">
         <select id="landlord_id">
-            <option hidden='hidden' selected='selected' value='default'>Choose Landlord</option>
-            <option value="1">List Option 1</option>
-            <option value="2">List Option 2</option>
-            <option value="3">List Option 3</option>
+
         </select>
     </div>
 
-    <button class="send_form" type="submit" >Submit</button>
+    <button onclick="addBuilding()" class="send_form" type="button" >Submit</button>
     <div id="text-info"></div>
 </form>
 
+<script>
+    $(document).ready(showAddressCreate);
+    function showAddressCreate() {
+        // let showChooseAddress = "";
+        let showChooseLandlord = "";
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/api/buildings",
+            success: function (data) {
+                // console.log(data[0].id);
+                for (let i = 0; i < data.length; i++) {
+
+                    showChooseLandlord += `
+                <option value=${data[i].landlord.id}>${data[i].landlord.fullName}</option>
+
+                    `
+
+                }
+                // document.getElementById("address_id").innerHTML = showChooseAddress;
+                document.getElementById("landlord_id").innerHTML = showChooseLandlord;
+            }
+        })
+    }
+</script>
 </body>
 </html>

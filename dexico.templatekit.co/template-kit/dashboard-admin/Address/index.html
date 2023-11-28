@@ -55,10 +55,17 @@
             </ul>
 
             <ul class="logout-mode">
-                <li><a href="#">
-                    <i class="uil uil-signout"></i>
-                    <span class="link-name">Logout</span>
-                </a></li>
+                <li><button onclick="logout()">
+                    LOGOUT
+                </button>
+                    <script>
+                        function logout() {
+                            localStorage.removeItem('authToken');
+                            window.location.href = 'http://localhost:63343/rentalitory-app/dexico.templatekit.co/index.html';
+                        }
+                    </script>
+
+                </li>
 
                 <li class="mode">
                     <a href="#">

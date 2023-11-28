@@ -4635,19 +4635,21 @@ body:not(.rtl) .elementor-253 .elementor-element.elementor-element-6455f14 .elem
         <script>
             let isUserExist = localStorage.getItem("authToken");
 
-            if(!isUserExist) {
-
-                document.write('<button id="login" href="http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/login-logout/login.html?">Login</button>');
-                document.write('<button id="register">Register</button>');
+            if (!isUserExist) {
+                document.write('<button id="login" onclick="window.location.href=\'http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/login-logout/login.html\'">Login</button>');
+                document.write('<button id="register" onclick="window.location.href=\'http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/login-logout/register.html\'">Register</button>');
             } else {
+                document.write('<button id="logout" onclick="logout()">Logout</button>');
 
-                document.write('<button id="logout" onclick="function(){}">Logout</button>');
+                function logout() {
+                    localStorage.removeItem('authToken');
+                    window.location.href = 'http://localhost:63343/rentalitory-app/dexico.templatekit.co/index.html'; // Adjust the URL to your index page
+                }
             }
         </script>
-
     </section>
-
 </div>
+
 <link rel='stylesheet' id='e-animations-css'
       href='wp-content/plugins/elementor/assets/lib/animations/animations.min8864.css?ver=3.17.3' media='all'/>
 <script id="hello-merkulove-js-extra">
