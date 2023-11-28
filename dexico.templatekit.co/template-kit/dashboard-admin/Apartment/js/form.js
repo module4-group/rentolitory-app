@@ -106,7 +106,10 @@ function addApartment() {
         type: "POST",
         data: JSON.stringify(newApartment),
         url: "http://localhost:8080/api/apartments/add",
-        success: showApartmentList
+        success: function (){
+            alert("Tạo thành công");
+            window.location.href="http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/index.html"
+        }
     })
 }
 
@@ -153,7 +156,10 @@ function deleteApartment(id) {
         //tên API
         url: `http://localhost:8080/api/apartments/${id}`,
         //xử lý khi thành công
-        success: addApartment
+        success: function (){
+            alert("Xóa thành công");
+            window.location.href="http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/index.html"
+        }
     });
 }
 
@@ -186,6 +192,9 @@ function updateApartment(id) {
         type: "PUT",
         data: JSON.stringify(updateApartment),
         url: `http://localhost:8080/api/apartments/${id}`,
-        success: showApartmentList
+        success: function (){
+            alert("Cập nhật thành công ")
+            window.location.href="http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/index.html"
+        }
     })
 }
