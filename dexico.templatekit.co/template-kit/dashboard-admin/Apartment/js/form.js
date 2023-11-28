@@ -101,7 +101,8 @@ function addApartment() {
     $.ajax({
         headers: {
             'Accept': 'application/json',
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': localStorage.getItem('authToken')
         },
         type: "POST",
         data: JSON.stringify(newApartment),
@@ -117,7 +118,7 @@ function showApartmentList() {
         url: "http://localhost:8080/api/apartments",
         success: function (data) {
             for (let i = 0; i < data.content.length; i++) {
-                if (data.content[i].activated == true){
+                if (data.content[i].activated === true){
                     contentApartment += `
                     
                 <tr>
