@@ -64,11 +64,14 @@
                         contentBuilding += `
                         <option value=${data.content[i].building.id}>${data.content[i].building.buildingName}</option>
                     `
+<<<<<<< HEAD
                         // console.log(data.content[i].building)
                         // console.log(data.content[i].building.buildingName)
 
                     }
                     document.getElementById("building").innerHTML = contentBuilding;
+=======
+>>>>>>> ff0ae2b9c8978cdb248780b2b9811de1b65f0b36
                 }
             })
         }
@@ -81,7 +84,7 @@
         </select>
     </div>
 
-    <button onclick="addApartment()" class="send_form" type="submit">Submit</button>
+    <button onclick="addApartment()" class="send_form" type="button">Submit</button>
     <div id="text-info"></div>
 </form>
 
