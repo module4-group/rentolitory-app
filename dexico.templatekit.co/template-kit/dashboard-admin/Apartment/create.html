@@ -53,26 +53,31 @@
         <span class="highlight"></span><span class="bar"></span>
         <label>Max Tenant</label>
     </div>
-<script>
-    function showBuilding() {
-        let contentBuilding = "";
-        $.ajax({
-            type: "GET",
-            url: "http://localhost:8080/api/apartments",
-            success: function (data) {
-                for (let i = 0; i < data.content.length; i++) {
-                    contentBuilding += `
-                        <option value=${data.content[i].building.id}>${data.content[i].building.buildingName}</option>
+    <script>
+        function showBuilding() {
+            let contentBuilding = "";
+            $.ajax({
+                headers: {
+                    "Authorization": "Bearer " + localStorage.getItem('authToken')
+                },
+                type: "GET",
+                url: "http://localhost:8080/api/buildings",
+                success: function (data) {
+                    console.log(data);
+
+                    for (let i = 0; i < data.length; i++) {
+                        contentBuilding += `
+                        <option value=${data[i].id}>${data[i].buildingName}</option>
                     `
+                    }
+                    document.getElementById("building").innerHTML = contentBuilding;
                 }
-                document.getElementById("building").innerHTML = contentBuilding;
-            }
-        })
-    }
+            })
+        }
 
-    $(document).ready(showBuilding);
+        $(document).ready(showBuilding);
 
-</script>
+    </script>
     <div class="datainput">
         <select id="building">
         </select>

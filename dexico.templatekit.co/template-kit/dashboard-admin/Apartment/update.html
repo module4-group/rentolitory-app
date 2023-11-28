@@ -37,6 +37,9 @@
     function showDataOld() {
         let contentDataOld = "";
         $.ajax({
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem('authToken')
+            },
             type: "GET",
             url: `http://localhost:8080/api/apartments/${apartmentId}`,
             success: function (data) {

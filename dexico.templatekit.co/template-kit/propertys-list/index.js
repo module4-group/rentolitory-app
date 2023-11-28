@@ -1,9 +1,13 @@
 $(document).ready(showApartment);
 let currentPage=0;
-function showApartment() {
+
+function showApartment( pageNo = 0, pageSize = 5) {
     $.ajax({
+        headers: {
+            "Authorization": "Bearer " + localStorage.getItem('authToken')
+        },
         type: "GET",
-        url: "http://localhost:8080/api/apartments",
+        url: "http://localhost:8080/api/apartments/list",
         data: {
             pageNo: currentPage,
             pageSize: 3
@@ -153,7 +157,6 @@ function showApartment() {
             }
             document.getElementById("show-apartment").innerHTML = contentWeb;
             document.getElementById("pagination").innerHTML=paging;
-            console.log(data)
 
         }
 
@@ -164,8 +167,8 @@ function nextPage() {
     currentPage++;
     showApartment();
 }
-function previousPage(){
-    if (currentPage===0){
+function previousPage() {
+    if (currentPage === 0) {
         return;
     }
     currentPage--;

@@ -19,101 +19,107 @@
     <script src="js/form.js"></script>
 </head>
 <body>
-    <nav>
-        <div class="logo-name">
-            <div class="logo-image">
-                <img src="../../../img/logo.png" height="121" width="140"/>
-            </div>
-
+<nav>
+    <div class="logo-name">
+        <div class="logo-image">
+            <img src="../../../img/logo.png" height="121" width="140"/>
         </div>
 
-        <div class="menu-items">
-            <ul class="nav-links">
-                <li><a href="../home-admin/home/index.html">
-                    <i class="uil uil-estate"></i>
-                    <span class="link-name">Dashboard</span>
-                </a></li>
-                <li><a href="index.html">
-                    <i class="uil uil-files-landscapes"></i>
-                    <span class="link-name">Apartment</span>
-                </a></li>
-                <li><a href="../Building/index.html">
-                    <i class="uil uil-chart"></i>
-                    <span class="link-name">Building</span>
-                </a></li>
-                <li><a href="../Address/index.html">
-                    <i class="uil uil-thumbs-up"></i>
-                    <span class="link-name">Address</span>
-                </a></li>
-                <li><a href="../Landlord/index.html">
-                    <i class="uil uil-comments"></i>
-                    <span class="link-name">Landlord</span>
-                </a></li>
-                <li><a href="../User/index.html">
-                    <i class="uil uil-share"></i>
-                    <span class="link-name">User</span>
-                </a></li>
-            </ul>
+    </div>
 
-            <ul class="logout-mode">
-                <li><a href="#">
-                    <i class="uil uil-signout"></i>
-                    <span class="link-name">Logout</span>
-                </a></li>
+    <div class="menu-items">
+        <ul class="nav-links">
+            <li><a href="../home-admin/home/index.html">
+                <i class="uil uil-estate"></i>
+                <span class="link-name">Dashboard</span>
+            </a></li>
+            <li><a href="index.html">
+                <i class="uil uil-files-landscapes"></i>
+                <span class="link-name">Apartment</span>
+            </a></li>
+            <li><a href="../Building/index.html">
+                <i class="uil uil-chart"></i>
+                <span class="link-name">Building</span>
+            </a></li>
+            <li><a href="../Address/index.html">
+                <i class="uil uil-thumbs-up"></i>
+                <span class="link-name">Address</span>
+            </a></li>
+            <li><a href="../Landlord/index.html">
+                <i class="uil uil-comments"></i>
+                <span class="link-name">Landlord</span>
+            </a></li>
+            <li><a href="../User/index.html">
+                <i class="uil uil-share"></i>
+                <span class="link-name">User</span>
+            </a></li>
+        </ul>
 
-                <li class="mode">
-                    <a href="#">
-                        <i class="uil uil-moon"></i>
+        <ul class="logout-mode">
+            <li><button onclick="logout()">
+                LOGOUT
+            </button>
+                <script>
+                    function logout() {
+                        localStorage.removeItem('authToken');
+                        window.location.href = 'http://localhost:63343/rentalitory-app/dexico.templatekit.co/index.html';
+                    }
+                </script>
+
+            </li>
+            <li class="mode">
+                <a href="#">
+                    <i class="uil uil-moon"></i>
                     <span class="link-name">Dark Mode</span>
                 </a>
 
                 <div class="mode-toggle">
-                  <span class="switch"></span>
+                    <span class="switch"></span>
                 </div>
             </li>
-            </ul>
-        </div>
-    </nav>
+        </ul>
+    </div>
+</nav>
 
-    <section class="dashboard">
-        <div class="top">
-            <i class="uil uil-bars sidebar-toggle"></i>
+<section class="dashboard">
+    <div class="top">
+        <i class="uil uil-bars sidebar-toggle"></i>
 
-            <div class="search-box">
-                <i class="uil uil-search"></i>
-                <input type="text" placeholder="Search here...">
-            </div>
-
-            <img src="images/profile.jpg" alt="">
+        <div class="search-box">
+            <i class="uil uil-search"></i>
+            <input type="text" placeholder="Search here...">
         </div>
 
-        <a href="create.html" type="button" class="btn btn-success" style="margin-top: 60px">Create</a>
-        <a href="index-delete.html" onclick="showApartmentListDelete()" type="button" class="btn btn-success" style="margin-top: 60px">Show List Delete</a>
+        <img src="images/profile.jpg" alt="">
+    </div>
+
+    <a href="create.html" type="button" class="btn btn-success" style="margin-top: 60px">Create</a>
+    <a href="index-delete.html" onclick="showApartmentListDelete()" type="button" class="btn btn-success" style="margin-top: 60px">Show List Delete</a>
 
 
-        <div class="dash-content">
-            <table class="table table-success table-striped">
-                <thead>
-                <tr>
-                    <th scope="col">STT</th>
-                    <th scope="col">Apartment name</th>
-                    <th scope="col">Room Number</th>
-                    <th scope="col">Area</th>
-                    <th scope="col">Number Of Bedroom</th>
-                    <th scope="col">Monthly Rent</th>
-                    <th scope="col">Max Tenant</th>
-                    <th scope="col">Building Id</th>
-                    <th scope="col">Activated</th>
-                    <th scope="col">Action</th>
-                </tr>
-                </thead>
-                <tbody id="showApartmentList">
+    <div class="dash-content">
+        <table class="table table-success table-striped">
+            <thead>
+            <tr>
+                <th scope="col">STT</th>
+                <th scope="col">Apartment name</th>
+                <th scope="col">Room Number</th>
+                <th scope="col">Area</th>
+                <th scope="col">Number Of Bedroom</th>
+                <th scope="col">Monthly Rent</th>
+                <th scope="col">Max Tenant</th>
+                <th scope="col">Building Name</th>
+                <th scope="col">Activated</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody id="showApartmentList">
 
-                </tbody>
-            </table>
-        </div>
-    </section>
-    <script src="./js/script.js"></script>
+            </tbody>
+        </table>
+    </div>
+</section>
+<script src="./js/script.js"></script>
 
 </body>
 </html>
