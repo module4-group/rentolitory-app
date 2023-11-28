@@ -78,116 +78,12 @@
 </script>
     <div class="datainput">
         <select id="building">
-
-
-
         </select>
     </div>
-<!--    <div class="datainput">-->
-<!--        <input class="validate" id="building_name" name="building_name" required="" type="text" value=''/>-->
-<!--        <span class="highlight"></span><span class="bar"></span>-->
-<!--        <label>Building Name</label>-->
-<!--    </div>-->
-<!--    <div class="datainput">-->
-<!--        <select id="city">-->
-<!--            <option value="" selected>Chọn tỉnh thành</option>-->
-<!--        </select>-->
 
-<!--        <select id="district">-->
-<!--            <option value="" selected>Chọn quận huyện</option>-->
-<!--        </select>-->
-
-<!--        <select id="ward">-->
-<!--            <option value="" selected>Chọn phường xã</option>-->
-<!--        </select>-->
-<!--    </div>-->
-<!--    <div class="datainput">-->
-<!--        <input class="validate" id="houseNumber" name="houseNumber" required="" type="text" value=''/>-->
-<!--        <span class="highlight"></span><span class="bar"></span>-->
-<!--        <label>House Number</label>-->
-<!--    </div>-->
-<!--    <div class="datainput">-->
-<!--        <input class="validate" id="fullName" name="full_name" required="" type="text" value=''/>-->
-<!--        <span class="highlight"></span><span class="bar"></span>-->
-<!--        <label>FullName</label>-->
-<!--    </div>-->
-<!--    <div class="datainput">-->
-<!--        <input class="validate" id="username" name="username" required="" type="text" value=''/>-->
-<!--        <span class="highlight"></span><span class="bar"></span>-->
-<!--        <label>Username</label>-->
-<!--    </div>-->
-<!--    <div class="datainput">-->
-<!--        <input class="validate" id="password" name="password" required="" type="password" value=''/>-->
-<!--        <span class="highlight"></span><span class="bar"></span>-->
-<!--        <label>Password</label>-->
-<!--    </div>-->
-<!--    <div class="datainput">-->
-<!--        <input class="validate" id="email" name="email" required="" type="email" value=''/>-->
-<!--        <span class="highlight"></span><span class="bar"></span>-->
-<!--        <label>Email</label>-->
-<!--    </div>-->
-
-<!--    <div class="datainput">-->
-<!--        <input class="validate" id="address" name="address" required="" type="text" value=''/>-->
-<!--        <span class="highlight"></span><span class="bar"></span>-->
-<!--        <label>Address</label>-->
-<!--    </div>-->
-
-<!--    <div class="datainput">-->
-<!--        <input class="validate" id="phone_number" name="phone_number" required="" type="number" value=''/>-->
-<!--        <span class="highlight"></span><span class="bar"></span>-->
-<!--        <label>Phone Number</label>-->
-<!--    </div>-->
-<!--    <div class="form-group">-->
-<!--        <label for="avatar">Avatar</label>-->
-<!--        <input type="file" class="form-control" id="avatar" name="avatar">-->
-<!--    </div>-->
     <button onclick="addApartment()" class="send_form" type="submit">Submit</button>
     <div id="text-info"></div>
 </form>
-
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>-->
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>-->
-<!--<script>-->
-<!--    const host = "https://provinces.open-api.vn/api/";-->
-<!--    var callAPI = (api) => {-->
-<!--        return axios.get(api)-->
-<!--            .then((response) => {-->
-<!--                renderData(response.data, "city");-->
-<!--            });-->
-<!--    }-->
-<!--    callAPI('https://provinces.open-api.vn/api/?depth=1');-->
-<!--    var callApiDistrict = (api) => {-->
-<!--        return axios.get(api)-->
-<!--            .then((response) => {-->
-<!--                renderData(response.data.districts, "district");-->
-<!--            });-->
-<!--    }-->
-<!--    var callApiWard = (api) => {-->
-<!--        return axios.get(api)-->
-<!--            .then((response) => {-->
-<!--                renderData(response.data.wards, "ward");-->
-<!--            });-->
-<!--    }-->
-
-<!--    var renderData = (array, select) => {-->
-<!--        let row = ' <option disable value="">Chọn</option>';-->
-<!--        array.forEach(element => {-->
-<!--            row += `<option data-id="${element.code}" value="${element.name}">${element.name}</option>`-->
-<!--        });-->
-<!--        document.querySelector("#" + select).innerHTML = row-->
-<!--    }-->
-
-<!--    $("#city").change(() => {-->
-<!--        callApiDistrict(host + "p/" + $("#city").find(':selected').data('id') + "?depth=2");-->
-
-<!--    });-->
-<!--    $("#district").change(() => {-->
-<!--        callApiWard(host + "d/" + $("#district").find(':selected').data('id') + "?depth=2");-->
-
-<!--    });-->
-
-<!--</script>-->
 
 </body>
 </html>
