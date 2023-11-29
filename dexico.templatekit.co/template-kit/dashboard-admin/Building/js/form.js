@@ -103,7 +103,7 @@ function showBuilding() {
                     <td>
 
                         <a href="update.html" class="btn btn-primary">Update</a>
-                        <button type="button" onclick="${data[i].id}" class="btn btn-danger">Delete</button>
+                        <button type="button" onclick="deleteBuilding(${data[i].id})" class="btn btn-danger">Delete</button>
                     </td>
                 </tr>`
             }
@@ -150,4 +150,17 @@ function addBuilding() {
             window.location.href="http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/Building/index.html";
         }
     })
+}
+function deleteBuilding(id) {
+    $.ajax({
+        type: "DELETE",
+        headers: {
+            "Authorization": "Bearer " + localStorage.getItem('authToken')
+        },
+        url: `http://localhost:8080/api/buildings/${id}`,
+        success: function () {
+            alert("Xóa thành công");
+            window.location.href = "http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/Building/index.html"
+        }
+    });
 }

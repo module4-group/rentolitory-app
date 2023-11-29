@@ -84,7 +84,10 @@ function addNewAddress() {
         data: JSON.stringify(newAddress),
 
         url: "http://localhost:8080/api/address/create",
-        success: showAddress
+        success: function (){
+            alert("Thêm thành công");
+            window.location.href="http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/Address/index.html"
+        }
     });
 
 
@@ -133,6 +136,9 @@ function deleteAddress(id) {
         //tên API
         url: `http://localhost:8080/api/address/${id}`,
         //xử lý khi thành công
-        success: showAddress
+        success: function () {
+            alert("Xóa thành công");
+            window.location.href = "http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/Address/index.html";
+        }
     });
 }

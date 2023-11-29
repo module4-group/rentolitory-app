@@ -67,7 +67,7 @@ function checkPasswordMatch(input1, input2) {
 $(document).ready(showUser);
 function showUser(){
     let content = "";
-    return $.ajax({
+    $.ajax({
         headers: {
             "Authorization": "Bearer " + localStorage.getItem('authToken')
         },
