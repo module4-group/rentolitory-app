@@ -108,7 +108,7 @@
             type: "GET",
             url: "http://localhost:8080/api/buildings",
             success: function (data) {
-                // console.log(data[0].id);
+                console.log(data)
                 for (let i = 0; i < data.length; i++) {
 
                     showChooseLandlord += `
@@ -117,8 +117,8 @@
                     `
 
                 }
-                // document.getElementById("address_id").innerHTML = showChooseAddress;
                 document.getElementById("landlord_id").innerHTML = showChooseLandlord;
+
             }
         })
     }

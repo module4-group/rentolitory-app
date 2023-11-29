@@ -21,20 +21,20 @@ function showSucces(input) {
 //check email is valid
 function checkEmail(input) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if(re.test(input.value.trim())) {
+    if (re.test(input.value.trim())) {
         showSucces(input)
-    }else {
-        showError(input,'Email is not invalid');
+    } else {
+        showError(input, 'Email is not invalid');
     }
 }
 
 
 //checkRequired fields
 function checkRequired(inputArr) {
-    inputArr.forEach(function(input){
-        if(input.value.trim() === ''){
-            showError(input,`${getFieldName(input)} is required`)
-        }else {
+    inputArr.forEach(function (input) {
+        if (input.value.trim() === '') {
+            showError(input, `${getFieldName(input)} is required`)
+        } else {
             showSucces(input);
         }
     });
@@ -42,12 +42,12 @@ function checkRequired(inputArr) {
 
 
 //check input Length
-function checkLength(input, min ,max) {
-    if(input.value.length < min) {
+function checkLength(input, min, max) {
+    if (input.value.length < min) {
         showError(input, `${getFieldName(input)} must be at least ${min} characters`);
-    }else if(input.value.length > max) {
+    } else if (input.value.length > max) {
         showError(input, `${getFieldName(input)} must be les than ${max} characters`);
-    }else {
+    } else {
         showSucces(input);
     }
 }
@@ -59,7 +59,7 @@ function getFieldName(input) {
 
 // check passwords match
 function checkPasswordMatch(input1, input2) {
-    if(input1.value !== input2.value) {
+    if (input1.value !== input2.value) {
         showError(input2, 'Passwords do not match');
     }
 }
@@ -93,10 +93,10 @@ function showBuilding() {
                 <tr>
                 <th scope="row">${data[i].id}</th>
                     <td>${data[i].buildingName}</td>
-                    <td>${data[i].city}</td>
-                    <td>${data[i].district}</td>
-                    <td>${data[i].ward}</td>
-                    <td>${data[i].houseNumber}</td>
+                    <td>${data[i].address.city}</td>
+                    <td>${data[i].address.district}</td>
+                    <td>${data[i].address.ward}</td>
+                    <td>${data[i].address.houseNumber}</td>
                     <td>${data[i].landlord.fullName}</td>
                     <td>${data[i].activated}</td>
                    
@@ -106,14 +106,15 @@ function showBuilding() {
                         <button type="button" onclick="${data[i].id}" class="btn btn-danger">Delete</button>
                     </td>
                 </tr>`
-                }
-                document.getElementById("showBuilding").innerHTML = contentBuilding;
-
             }
-            // console.log(data)
+            document.getElementById("showBuilding").innerHTML = contentBuilding;
+
+        }
+        // console.log(data)
         // }
     })
 }
+
 function addBuilding() {
     let buildingName = $('#building_name').val();
     let city = $('#city').val();
@@ -132,19 +133,21 @@ function addBuilding() {
     console.log(newBuilding)
 
     $.ajax({
-            headers: {
-                "Authorization": "Bearer " + localStorage.getItem('authToken'),
+        headers: {
+            "Authorization": "Bearer " + localStorage.getItem('authToken'),
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
         type: "POST",
         data: JSON.stringify(newBuilding),
         url: "http://localhost:8080/api/buildings/create",
-        success: function() {
-            showBuilding();
+        success: function () {
+            alert("Building successfully created!");
+            window.location.href="http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/Building/index.html";
         },
-        error: function() {
-            console.log("error")
+        error: function () {
+            alert("failed to create building!");
+            window.location.href="http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/Building/index.html";
         }
     })
 }

@@ -205,4 +205,21 @@ function updateLandlord(id) {
     })
 }
 
+// function search(){
+//     let inputSearch = $('#inputSearch').val();
+//
+//     $.ajax({
+//         type:"GET",
+//         url:`http://localhost:8080/api/landlords/search`,
+//         headers: {
+//             "Authorization": "Bearer " + localStorage.getItem('authToken')
+//         },
+//         success:function () {
+//             console.log("hello")
+//
+//         }
+//     })
+
+// }
+
 $(document).ready(showLandlordList);
