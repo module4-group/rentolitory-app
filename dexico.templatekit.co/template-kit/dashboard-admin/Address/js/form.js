@@ -4,6 +4,7 @@ const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
 
 $(document).ready(showAddress);
+
 //Show input error messages
 function showError(input, message) {
     const formControl = input.parentElement;
@@ -75,6 +76,7 @@ function addNewAddress() {
     };
     $.ajax({
         headers: {
+            "Authorization": "Bearer " + localStorage.getItem('authToken'),
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
@@ -82,7 +84,10 @@ function addNewAddress() {
         data: JSON.stringify(newAddress),
 
         url: "http://localhost:8080/api/address/create",
-        success :showAddress
+        success: function (){
+            alert("Thêm thành công");
+            window.location.href="http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/Address/index.html"
+        }
     });
 
 
@@ -91,7 +96,10 @@ function addNewAddress() {
 function showAddress(e) {
     let content = "";
     $.ajax({
-        type: "GET",
+        headers: {
+            "Authorization": "Bearer " + localStorage.getItem('authToken')
+        },
+            type: "GET",
         url: "http://localhost:8080/api/address",
         success: function (data) {
             for (let i = 0; i < data.length; i++) {
@@ -121,10 +129,16 @@ function showAddress(e) {
 
 function deleteAddress(id) {
     $.ajax({
+        headers: {
+            "Authorization": "Bearer " + localStorage.getItem('authToken')
+        },
         type: "DELETE",
         //tên API
         url: `http://localhost:8080/api/address/${id}`,
         //xử lý khi thành công
-        success: showAddress
+        success: function () {
+            alert("Xóa thành công");
+            window.location.href = "http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/Address/index.html";
+        }
     });
 }

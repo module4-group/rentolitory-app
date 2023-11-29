@@ -67,7 +67,10 @@ function checkPasswordMatch(input1, input2) {
 $(document).ready(showUser);
 function showUser(){
     let content = "";
-    return $.ajax({
+    $.ajax({
+        headers: {
+            "Authorization": "Bearer " + localStorage.getItem('authToken')
+        },
         type:"GET",
         url:"http://localhost:8080/api/user",
         success: function (data){
@@ -94,6 +97,9 @@ function showUser(){
 }
 function deleteUser(id) {
     $.ajax({
+        headers: {
+            "Authorization": "Bearer " + localStorage.getItem('authToken')
+        },
         type: "DELETE",
         //tên API
         url: `http://localhost:8080/api/user/${id}`,

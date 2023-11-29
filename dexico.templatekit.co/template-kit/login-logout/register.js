@@ -26,12 +26,12 @@ function register(event) {
             console.log("Đăng ký thành công:", response);
             let confirmation = confirm("Đăng ký thành công! trở về trang đăng nhập.");
             if (confirmation) {
-                location.href = "dexico.templatekit.co/template-kit/login-register/login.html"
+                window.location.href = "http://localhost:63343/rentalitory-app/dexico.templatekit.co/index.html?_ijt=5ab3ganmp31c3a3h0lgk3852aa&_ij_reload=RELOAD_ON_SAVE"
             }
         },
         error: function (xhr) {
             if (xhr.status >= 400 && xhr.status < 500) {
-                alert("đăng nhập không hợp lệ");
+                alert("đăng ký không hợp lệ");
             } else if (xhr.status >= 500) {
                 alert("Lỗi server");
             }

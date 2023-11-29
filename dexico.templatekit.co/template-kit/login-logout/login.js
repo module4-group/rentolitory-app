@@ -1,7 +1,5 @@
 
-$(document).ready(function () {
-    $("#loginForm").submit(function (e) {
-        e.preventDefault();
+function login(e) {
 
         let username = $("#loginUsername").val();
         let password = $("#loginPassword").val();
@@ -14,9 +12,14 @@ $(document).ready(function () {
                 password: password
             }),
             success: function (response) {
-                alert(response.message)
+                alert(response.message);
                 localStorage.setItem('authToken', response.token);
-                window.location.href = "/rentalitory-app/dexico.templatekit.co/index.html";
+                if (response.admin===true){
+                    location.href = "http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/home-admin/home/index.html";
+                }
+                else {
+                    location.href = "http://localhost:63343/rentalitory-app/dexico.templatekit.co/index.html?_ijt=3qg54m16mvqa9m61pge3edih75&_ij_reload=RELOAD_ON_SAVE";
+                }
             },
             error: function (xhr) {
                 if (xhr.status >= 400 && xhr.status < 500) {
@@ -25,13 +28,7 @@ $(document).ready(function () {
                     alert("Lỗi server");
                 }
             }
-        });
-    });
-});
+        })
+    }
 
-function logout() {
-    localStorage.removeItem('authToken');
-    window.location.href = "/rentalitory-app/dexico.templatekit.co/index.html";
-
-}
 

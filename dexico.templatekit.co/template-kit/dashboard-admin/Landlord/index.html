@@ -59,7 +59,19 @@
                 <span class="link-name">User</span>
             </a></li>
         </ul>
+            <ul class="logout-mode">
+                <li><button onclick="logout()">
+                    LOGOUT
+                </button>
+                    <script>
+                        function logout() {
+                            localStorage.removeItem('authToken');
+                            window.location.href = 'http://localhost:63343/rentalitory-app/dexico.templatekit.co/index.html';
+                        }
+                    </script>
 
+                </li>
+            </ul>
         <ul class="logout-mode">
             <li><a href="#">
                 <i class="uil uil-signout"></i>
@@ -77,16 +89,15 @@
                 </div>
             </li>
         </ul>
-    </div>
 </nav>
 
 <section class="dashboard">
     <div class="top">
         <i class="uil uil-bars sidebar-toggle"></i>
-        <form style="width: 30%">
+        <form id="searchForm" style="width: 30%">
             <div class="search-box">
-                <input name="fullName" value="" type="text" placeholder="Search here...">
-                <button type="submit"><i class="uil uil-search"></i></button>
+                <input id="fullNameInput" name="fullName" value="" type="text" placeholder="Search here...">
+                <button onclick="search()"><i class="uil uil-search"></i></button>
             </div>
         </form>
         <img src="images/profile.jpg" alt="">
@@ -115,6 +126,36 @@
         </table>
     </div>
 </section>
+<script>
+    function search() {
+        let fullName = $("#fullNameInput").val();
 
+        $.ajax({
+            url: "http://localhost:8080/api/landlords/search",
+            type: "GET",
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem('authToken'),
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            data: {
+                fullName: fullName
+            },
+
+
+            success: function(response) {
+                console.log(fullName)
+                // Xử lý dữ liệu response ở đây
+                console.log(response);
+            },
+            error: function(xhr, status, error) {
+                console.error(error);
+            }
+        });
+    }
+
+
+
+</script>
 </body>
 </html>
