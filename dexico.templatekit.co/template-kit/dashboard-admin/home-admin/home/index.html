@@ -51,30 +51,29 @@
                     <span class="link-name">User</span>
                 </a></li>
             </ul>
-            
-            <ul class="logout-mode">
-                <li><button onclick="logout()">
-                    LOGOUT
-                </button>
-                    <script>
-                        function logout() {
-                            localStorage.removeItem('authToken');
-                            window.location.href = 'http://localhost:63343/rentalitory-app/dexico.templatekit.co/index.html';
-                        }
-                    </script>
 
-                </li>
+            <ul class="logout-mode" onclick="logout()">
+                <li><a href="#">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
 
                 <li class="mode">
                     <a href="#">
                         <i class="uil uil-moon"></i>
-                    <span class="link-name">Dark Mode</span>
-                </a>
+                        <span class="link-name">Dark Mode</span>
+                    </a>
 
-                <div class="mode-toggle">
-                  <span class="switch"></span>
-                </div>
-            </li>
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                <script>
+                    function logout() {
+                        localStorage.removeItem('authToken');
+                        window.location.href = 'http://localhost:63343/rentalitory-app/dexico.templatekit.co/index.html';
+                    }
+                </script>
             </ul>
         </div>
     </nav>

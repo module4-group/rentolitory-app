@@ -72,7 +72,7 @@ function showUser(){
             "Authorization": "Bearer " + localStorage.getItem('authToken')
         },
         type:"GET",
-        url:"http://localhost:8080/api/user",
+        url:"http://localhost:8080/api/users",
         success: function (data){
             for (let i = 0; i < data.length; i++) {
                 content += `

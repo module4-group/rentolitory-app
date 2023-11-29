@@ -142,11 +142,9 @@ function addBuilding() {
         data: JSON.stringify(newBuilding),
         url: "http://localhost:8080/api/buildings/create",
         success: function () {
-            alert("Building successfully created!");
             window.location.href="http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/Building/index.html";
         },
         error: function () {
-            alert("failed to create building!");
             window.location.href="http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/Building/index.html";
         }
     })

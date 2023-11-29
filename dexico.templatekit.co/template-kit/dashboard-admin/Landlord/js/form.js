@@ -86,20 +86,20 @@ function showLandlordList() {
         url: "http://localhost:8080/api/landlords",
         success: function (data) {
             console.log(data)
-            for (let i = 0; i < data.content.length; i++) {
+            for (let i = 0; i < data.length; i++) {
                 contentLandLord += `
                 <tr>
-                    <th scope="row">${data.content[i].id}</th>
-                    <td>${data.content[i].fullName}</td>
-                    <td>${data.content[i].username}</td>
-                    <td>${data.content[i].email}</td>
-                    <td>${data.content[i].address}</td>
-                    <td>${data.content[i].phoneNumber}</td>
-                    <td>${data.content[i].avatar}</td>
-                    <td>${data.content[i].activated}</td>
+                    <th scope="row">${data[i].id}</th>
+                    <td>${data[i].fullName}</td>
+                    <td>${data[i].username}</td>
+                    <td>${data[i].email}</td>
+                    <td>${data[i].address}</td>
+                    <td>${data[i].phoneNumber}</td>
+                    <td>${data[i].avatar}</td>
+                    <td>${data[i].activated}</td>
                     <td>
-                        <a type="button" class="btn btn-primary" href="update.html?id=${data.content[i].id}" >Update</a>
-                        <button onclick="deleteLandlord(${data.content[i].id})" type="button" class="btn btn-danger">Delete</button>
+                        <a type="button" class="btn btn-primary" href="update.html?id=${data[i].id}" >Update</a>
+                        <button onclick="deleteLandlord(${data[i].id})" type="button" class="btn btn-danger">Delete</button>
                     </td>
                 </tr>
            `
