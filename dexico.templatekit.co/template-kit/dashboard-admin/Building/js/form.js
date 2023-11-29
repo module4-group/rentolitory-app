@@ -93,17 +93,17 @@ function showBuilding() {
                 <tr>
                 <th scope="row">${data[i].id}</th>
                     <td>${data[i].buildingName}</td>
-                    <td>${data[i].city}</td>
-                    <td>${data[i].district}</td>
-                    <td>${data[i].ward}</td>
-                    <td>${data[i].houseNumber}</td>
+                    <td>${data[i].address.city}</td>
+                    <td>${data[i].address.district}</td>
+                    <td>${data[i].address.ward}</td>
+                    <td>${data[i].address.houseNumber}</td>
                     <td>${data[i].landlord.fullName}</td>
                     <td>${data[i].activated}</td>
                    
                     <td>
 
                         <a href="update.html" class="btn btn-primary">Update</a>
-                        <button type="button" onclick="${data[i].id}" class="btn btn-danger">Delete</button>
+                        <button type="button" onclick="deleteBuilding(${data[i].id})" class="btn btn-danger">Delete</button>
                     </td>
                 </tr>`
                 }
@@ -147,4 +147,17 @@ function addBuilding() {
             console.log("error")
         }
     })
+}
+function deleteBuilding(id) {
+    $.ajax({
+        type: "DELETE",
+        headers: {
+            "Authorization": "Bearer " + localStorage.getItem('authToken')
+        },
+        url: `http://localhost:8080/api/buildings/${id}`,
+        success: function () {
+            alert("Xóa thành công");
+            window.location.href = "http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/Building/index.html"
+        }
+    });
 }

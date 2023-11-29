@@ -114,7 +114,9 @@ function addApartment() {
     })
 }
 
-function showApartmentList() {
+let currentPage = 0;
+
+function showApartmentList(pageNo = 0, pageSize = 5) {
     let contentApartment = "";
     $.ajax({
 
@@ -123,7 +125,12 @@ function showApartmentList() {
         headers: {
             "Authorization": "Bearer " + localStorage.getItem('authToken')
         },
+        data: {
+            pageNo: currentPage,
+            pageSize: 3
+        },
         success: function (data) {
+            let paging = "";
             for (let i = 0; i < data.content.length; i++) {
                 if (data.content[i].activated == true) {
                     contentApartment += `
@@ -145,9 +152,12 @@ function showApartmentList() {
                     </td>
                 </tr>`
                 }
-                document.getElementById("showApartmentList").innerHTML = contentApartment;
-
             }
+            for (let i = 1; i <= data.totalPages; i++) {
+                paging += `<li class="page-item"><a class="page-link" href="#" >${i}</a></li>`;
+            }
+            document.getElementById("showApartmentList").innerHTML = contentApartment;
+            document.getElementById("pagination").innerHTML = paging;
             // console.log(data)
         }
     })
@@ -205,4 +215,18 @@ function updateApartment(id) {
             window.location.href = "http://localhost:63343/rentalitory-app/dexico.templatekit.co/template-kit/dashboard-admin/Apartment/index.html"
         }
     })
+}
+
+function nextPage() {
+    currentPage++;
+
+    showApartmentList();
+}
+
+function previousPage() {
+    if (currentPage === 0) {
+        return;
+    }
+    currentPage--;
+    showApartmentList();
 }
